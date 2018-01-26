@@ -1,0 +1,42 @@
+/* decalare varibles */
+:root {
+  /* colors */
+  --light-brown: #B37c57;
+  --black: #000;
+  
+  --title-font-size: 3em;
+}
+
+/* import fonts */
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+
+/************************************************************ 
+BASE STYLES 
+*************************************************************/
+body {
+  font-size: 16px;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+
+  margin: 3rem 1rem;
+  text-align: center;
+  font-size: var(--title-font-size); 
+  color: var(--light-brown);
+  letter-spacing: 1px;
+
+  text-shadow:
+   -1px -1px 0 var(--black),  
+    1px -1px 0 var(--black),
+    -1px 1px 0 var(--black),
+     1px 1px 0 var(--black),
+     1px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+@media (min-width: 800px) {
+  :root {
+    --title-font-size: 4em;
+  }
+}
