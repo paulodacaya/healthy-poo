@@ -1,27 +1,24 @@
-/* healthy-poo application
-   An application designed to determine the healthyness of your poo, 
-   and steps taken to have healthier poo. */
+/* 
+  healthy-poo.  
+  An application designed to determine 
+  the healthyness of your poo, and steps 
+  taken to have healthier poo. 
+*/
+  
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-// react router dependencies
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
-// sync redux with react-router-dom
-// import { Provider } from 'react-redux';
+import { BrowserRouter, Route } from 'react-router-dom';
+import registerServiceWorker from './registerServiceWorker';
 
 // components
-import App from './components/App';
-import Main from './components/Main';
+import App from './containers/App';
 
 //import CSS
-import css from './styles/main.css';
-
-import registerServiceWorker from './registerServiceWorker';
+import './styles/main.css';
 
 const reactRouter = (
   <BrowserRouter>
-    <Route exact path="/" component={Main} />
+    <Route path="/" component={App} />
   </BrowserRouter>
 )
 
