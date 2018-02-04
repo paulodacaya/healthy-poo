@@ -8,8 +8,12 @@ MAIN STYLES
 /* container.wrapper */
 .wrapper {
   width: 80vw;
-  margin: 0 auto 1em;
+  max-width: 1050px;
+  margin: 0 auto 3em;
   text-align: center;
+}
+#result-wrapper {
+  width: 92vw;
 }
 
 .grid-container {
@@ -22,36 +26,45 @@ MAIN STYLES
 
 /* card  */
 .card {
+  border-radius: var(--border-radius);
   text-align: center;
-  border-radius: 0.6em;
-
-  background-color: var(--lead);
-  box-shadow: 0 5px 0 var(--lead-dark);
-
+  
+  box-shadow: 0 7px 0 var(--lead-dark);
   transition: all 450ms ease;
 }
 .card:hover {
-  background-color: var(--lead-slightly-dark);
-  box-shadow: 0 0 1px var(--lead-dark),
-              inset 0 1px 0 var(--lead-dark);
-  transform: translateY(5px);
+  box-shadow: 0 0 1px var(--lead-dark);
+  transform: translateY(7px);
+}
+.card:hover .card-image {
+  box-shadow: inset 0 1px 0 var(--lead);
 }
 
-.card > p {
-  position: relative;
+.card-image {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  /* background-color: var(--lead-slightly-light); */
+  background: linear-gradient(var(--lead-light) 45%,
+                              var(--lead-slightly-light) 0, var(--lead-slightly-light) 55%,
+                              var(--lead-light) 0);
+  padding: 2em 0;
+  transition: box-shadow 450ms ease;
+}
 
-  border-top: 1px dashed rgba(51, 51, 51, 0.2);
+.card .card-text {
+  position: relative;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  background-color: var(--lead);
+  border-top: 2px dashed rgba(51, 51, 51, 0.2);
   padding: 1em;
   padding-top: 1.8em;
 }
-.card h3 {
+.card-text > h3 {
   position: absolute;
   top: -1em;
   left: 50%;
   transform: translateX(-50%);
 
   background-color: var(--nightfall);
-  border-radius: 2px;
   color: white;
   text-shadow: 0 1.5px 0 var(--black);
   text-transform: uppercase;
@@ -59,10 +72,150 @@ MAIN STYLES
 }
 
 
-/* MEDIA QUERIES */
+/* result page */
+.result {
+  background-color: #f7f7f7;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 0 0.6em var(--lead-slightly-light);
+  padding: 0.5em;
+}
+.result-info {
+  margin-bottom: 2em;
+}
+.result-info > main {
+  display: grid;
+  grid-gap: 3em;
+  justify-items: center;
+  align-items: center;
+  margin: 5em 0;
+}
+.result-info > section {
+  margin-bottom: 5em;
+}
+.result-info p, 
+.result-info section,
+.result-comments {
+  text-align: left;
+}
+.radial-border {
+  box-shadow: 0 0 0 0.2em var(--lead-slightly-light);
+  border-radius: 50%;
+}
+
+/* citation */
+.citation::after {
+  /* float clear-fix */
+  content: "";
+  display: table;
+  clear: both; 
+}
+.sources {
+  float: right;
+  display: flex;
+  font-size: 0.8em;
+  text-align: right;
+  color: rgba(165, 181, 181, 0.5);
+}
+.sources > strong {
+  margin-right: 1em;
+}
+.sources a:hover {
+  text-decoration: underline;
+  color: rgba(165, 181, 181, 0.8);
+}
+
+/* result comments */
+.result-comments {
+  margin-top: 8em;
+}
+.comment {
+  display: flex;
+  padding: 1em 0;
+  border-top: 1px solid var(--lead-dark);
+}
+.comment > strong {
+  color: var(--nightfall);
+  margin-right: 0.5em;
+}
+.comment-form {
+  position: relative;
+}
+.comment-form, .box-btn {
+  margin: 1.5em 0;
+}
+.comment-btns {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+.box-btn {
+  padding: 1em;
+}
+.round-btn {
+  padding: 0.5em 1em;
+  border-radius: 50px;
+}
+.x-btn {
+  background: none;
+  font-size: 1em;
+  border: 0;
+  opacity: 0;
+}
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  opacity: 1;
+}
+.x-btn:hover {
+  text-decoration: none;
+  color: var(--nightfall);
+}
+.comment:hover .x-btn {
+  opacity: 1;
+}
+
+.input {
+  background-color: var(--edward);
+  width: 100%;
+  height: 40px;
+  border-width: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none; 
+  font-size: 0.8em;
+}
+
+.input.comment {
+  height: 150px;
+  padding: 0.5em;
+}
+
+
+/************************************************************ 
+MEDIA QUERIES
+*************************************************************/
+@media (min-width: 500px) {
+  .result {
+    padding: 1.8em;
+  }
+}
+
 @media (min-width: 750px) {
   .grid-container {
     grid-template-columns: repeat(2, minmax(150px, 350px)); 
+  }
+  .result {
+    padding: 3em;
+  }
+  .result-info > main {
+    grid-template-columns: 1fr 3fr;
+  }
+  .comment-btns {
+    flex-direction: row;
+  }
+  .comment-btns .round-btn {
+    margin-left: 5px;
   }
 }
 

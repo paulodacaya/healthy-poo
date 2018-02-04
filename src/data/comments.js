@@ -1,22 +1,43 @@
-const comments = {
-  "Result-1":[
-    {
-      user: "Franky",
-      text: "Looks like I am healthy :) I feel much better.",
-      replys: [
-        {
-          user: "Brook",
-          text: "I'm feeling the same way franky! "
-        },
-      ],
-    }
-  ],
-  "Result-2":[
-    {
-      "user": "Waldo",
-      "text": "Sometimes my stool is blue...",
-    }
-  ],
-};
-
+const comments = [
+  {
+    user: "Franky",
+    text: "Looks like I am healthy😇 I feel much better.",
+    replys: [
+      {
+        user: "Brook",
+        text: "I'm feeling the same way franky!",
+        replys: [
+          {
+            user: "hello",
+            text: "I am a third way comment"
+          },
+        ],
+      },
+    ],
+  },
+  {
+    user: "Franky",
+    text: "Looks like I am healthy :) I feel much better.",
+    replys: [
+      {
+        user: "Brook",
+        text: "I'm feeling the same way franky!",
+      },
+    ],
+  },
+  {
+    user: "Franky",
+    text: "Looks like I am healthy :) I feel much better.",
+  },
+  {
+    user: "Franky",
+    text: "Looks like I am healthy :) I feel much better.",
+    replys: [
+      {
+        user: "Brook",
+        text: "I'm feeling the same way franky! "
+      },
+    ],
+  },
+]
 export default comments;

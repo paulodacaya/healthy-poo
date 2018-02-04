@@ -5,6 +5,8 @@
   --light-brown: #B37c57;
   --nightfall: #3c455c;
 
+  --lead-light: #b8c5cd;  
+  --lead-slightly-light: #aebcc6;
   --lead: #9aacb8; 
   --lead-slightly-dark: #90a4b1;
   --lead-dark: #7c93a3;
@@ -13,9 +15,10 @@
   --iron: rgba(221, 227, 227, 0.15);
   --edward: rgba(165, 181, 181, 0.15);
 
-  
+  --border-radius: 0.6em;
   --title-font-size: 3em;
   --question-font-size: 1.2em;
+  --font-weight: 700;
 }
 
 /* import fonts */
@@ -26,19 +29,16 @@
 BASE STYLES 
 *************************************************************/
 html {
-  font-family: 'Arimo', sans-serif;
-  height: 100%; /* fixes background pattrn issue */
-  font-size: 16px; 
-  letter-spacing: 0.5px;
   background: repeating-linear-gradient(30deg,
                                         var(--iron), var(--iron) 30px,
                                         var(--edward) 0, var(--edward) 60px);
 }
-
 body {
-  line-height: 1.3;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  font-size: 16px; 
+  font-family: 'Arimo', sans-serif;
 }
-
 h1 {
   font-family: 'Pacifico', cursive;
 
@@ -47,7 +47,6 @@ h1 {
   font-size: var(--title-font-size); 
   color: var(--light-brown);
   letter-spacing: 1px;
-  line-height: 1.3;
 
   text-shadow:
    -1px -1px 0 var(--black),  
@@ -56,29 +55,94 @@ h1 {
      1px 1px 0 var(--black),
      1px 4px 0 rgba(0, 0, 0, 0.12);
 }
-
 h2 {
   font-size: var(--question-font-size);
   margin-bottom: 2em;
 }
-
 h3 {
   font-size: 1.2em;
 }
+h4 {
+  font-size: 2em;
+  margin: 1em 0;
+  text-transform: uppercase;
+  font-weight: var(--font-weight);
+}
+h5 {
+  font-size: 1.1em;
+  font-weight: var(--font-weight);
+  margin-bottom: 0.5em;
+}
+h6 {
+  font-size: 1.5em;
+  color: var(--nightfall);
+  font-weight: var(--font-weight);
+}
 
 strong {
-  font-weight: 700;
+  font-weight: var(--font-weight);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
-/* MEDIA QUERIES */
+form, button {
+  border: 1px solid var(--lead-slightly-dark);
+  background-color: #fff;
+}
+
+button {
+  cursor: pointer;
+  font-weight: var(--font-weight);
+  text-transform: capitalize;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+form {
+  padding: 1em;
+}
+
+fieldset {
+  margin-bottom: 1em;
+}
+
+input {
+  display: block;
+  padding: 0.5em;
+}
+
+textarea {
+  font-family: inherit;
+  resize: none;
+  line-height: 1.3;
+}
+
+label {
+  display: inline-block;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: var(--lead-dark);
+  margin-bottom: 5px;
+}
+section {
+  margin: 2.5em 0;
+}
+
+/************************************************************ 
+MEDIA QUERIES
+*************************************************************/
 @media (min-width: 800px) {
   :root {
     --title-font-size: 4em;
     --question-font-size: 1.5em;
+  }
+  h4 {
+    font-size: 2.5em;
   }
 }

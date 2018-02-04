@@ -11,20 +11,19 @@ const ShapeGrid = () => {
 
   return (
     <div className="wrapper">
-      <h2><strong>Question:</strong> What is the shape of my poo?</h2>
-      
+      <h2><strong>Question:</strong> What is the shape of my poo (Bristol Stool Chart)?</h2>
       <div className="grid-container">
         
-        {stoolShapes.map( (stoolShapes, index) => 
-          <Link to="/shapes/colors">
+        {stoolShapes.map( (stoolShape, index) => (
+          <Link key={index} to={`/${stoolShape.shapeCode}`}>
             <Card 
               key={index}
-              cardImage={stoolShapes.image}
-              cardAltAttibute={stoolShapes.imageAlt}
-              cardTitle={stoolShapes.type}
-              cardText={stoolShapes.description} />
+              cardImage={stoolShape.imagePath}
+              cardAltAttibute={stoolShape.imageAlt}
+              cardTitle={stoolShape.type}
+              cardText={stoolShape.description} />
           </Link>
-        )}
+        ))}
 
       </div>
     </div>

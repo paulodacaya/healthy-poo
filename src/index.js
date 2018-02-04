@@ -1,8 +1,7 @@
 /* 
   healthy-poo.  
-  An application designed to determine 
-  the healthyness of your poo, and steps 
-  taken to have healthier poo. 
+  An application indicating your health
+  through the visuals of your stool.
 */
   
 import React from 'react';
@@ -17,7 +16,7 @@ import App from './containers/App';
 import './styles/main.css';
 
 const reactRouter = (
-  <BrowserRouter>
+  <BrowserRouter basename="/healthy-poo">
     <Route path="/" component={App} />
   </BrowserRouter>
 )

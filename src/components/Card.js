@@ -1,15 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = props => (
-  <div className="card">
-    <img src={props.cardImage} alt={props.cardAltAttibute} />
-    <p>
-      <h3>{props.cardTitle}</h3>
-      {props.cardText}
-    </p>
-  </div>
-)
+const Card = props => {
+  
+  return (
+    <div className="card">
+      <div className="card-image">
+        <img src={props.cardImage} alt={props.cardAltAttibute} />
+      </div>
+      <div className="card-text"> 
+        <h3>{props.cardTitle}</h3>
+        <p>{props.cardText}</p>
+      </div>
+    </div>
+  )
+}
 
 Card.propTypes = {
   cardImage: PropTypes.string.isRequired,
