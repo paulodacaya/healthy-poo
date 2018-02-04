@@ -5,4 +5,4 @@ Find out a little about your health with the stool you make! Your stool can give
 Application will be built with React and Redux.
 
 ## Getting Started
-Click on the following link to visit the app (Link commin soon).
+Click on the following [link to visit app](http://paulodacaya.xyz/healthy-poo). The project is currently in progress and is updated regularly.
