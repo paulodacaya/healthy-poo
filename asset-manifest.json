@@ -1,6 +1,18 @@
 {
-  "main.css": "static/css/main.5028a180.css",
-  "main.css.map": "static/css/main.5028a180.css.map",
-  "main.js": "static/js/main.45045394.js",
-  "main.js.map": "static/js/main.45045394.js.map"
+  "main.css": "static/css/main.4d50be07.css",
+  "main.css.map": "static/css/main.4d50be07.css.map",
+  "main.js": "static/js/main.96183ed2.js",
+  "main.js.map": "static/js/main.96183ed2.js.map",
+  "static/media/stool_brown.svg": "static/media/stool_brown.ebe42bea.svg",
+  "static/media/stool_dark.svg": "static/media/stool_dark.22a2ecc8.svg",
+  "static/media/stool_green.svg": "static/media/stool_green.dd88826b.svg",
+  "static/media/stool_light.svg": "static/media/stool_light.e8c49722.svg",
+  "static/media/stool_red.svg": "static/media/stool_red.647f1245.svg",
+  "static/media/type1_stool.svg": "static/media/type1_stool.f4a7bbea.svg",
+  "static/media/type2_stool.svg": "static/media/type2_stool.b2e24fe2.svg",
+  "static/media/type3_stool.svg": "static/media/type3_stool.50738a25.svg",
+  "static/media/type4_stool.svg": "static/media/type4_stool.cc8da5c2.svg",
+  "static/media/type5_stool.svg": "static/media/type5_stool.be8bcb7c.svg",
+  "static/media/type6_stool.svg": "static/media/type6_stool.6e0abc50.svg",
+  "static/media/type7_stool.svg": "static/media/type7_stool.6d995792.svg"
 }
