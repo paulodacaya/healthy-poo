@@ -92,6 +92,9 @@ MAIN STYLES
 .result-info > section {
   margin-bottom: 5em;
 }
+.result-info p {
+  margin-bottom: 1em;
+}
 .result-info p, 
 .result-info section,
 .result-comments {
@@ -146,6 +149,7 @@ MAIN STYLES
 .comment-btns {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-left: auto;
 }
 .box-btn {
@@ -154,6 +158,7 @@ MAIN STYLES
 .round-btn {
   padding: 0.5em 1em;
   border-radius: 50px;
+  max-height: 28px;
 }
 .x-btn {
   background: none;
