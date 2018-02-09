@@ -394,6 +394,7 @@ const resultsData = {
 }
 export const otherText = {
   smellyPoo: "If you noticed that your poo is more smelly than usual, there is chance that you could be constipated and your stool has stayed inside longer that usual. While it stays inside your system, more natural gasses are produced and bacteria in your colon is 'fermenting.' Slowly adding more fiber to your diet and staying hydrated is recomended. In particular, if you came from international travels and your poo smells terrible, please consult your doctor, possible symptoms of parastic, viral, or bacterial infection.",
+  howOften: "So how often should you poo? Well... you should have at least one bowel movement per day but making sure your bowels feel empty and not partially. However, this make vary, some people have more that one bowel movement per day due to faster matabolism, larger diet, more fiber or higher bacterial count. More that 3 bowel movements per day usually means you have diarrhoea. Some doctors claim that it is normal to have three bowel movements per week, even one per week. In conclusion, it varies from person to person but having atleast one bowel movement per day is recommended."
 }
 
 export default resultsData;

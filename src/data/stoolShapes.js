@@ -4,7 +4,7 @@ const stoolShapes = [
     imagePath: require("../assests/shapes/type1_stool.svg"),
     imageAlt: "Type 1 stool",
     type: "Type 1", 
-    description: "Separated hard lumps, like little balls (should be obvious)", 
+    description: "Separated hard lumps, like little balls (hard to push out)", 
   },
   {
     shapeCode: "type2",
@@ -32,7 +32,7 @@ const stoolShapes = [
     imagePath: require("../assests/shapes/type5_stool.svg"),
     imageAlt: "Type 5 stool",
     type: "Type 5", 
-    description: "Soft blobs with clear cut edges (can be hard to distinguish)", 
+    description: "Soft blobs with clear cut edges (easy to push out)", 
   },
   { 
     shapeCode: "type6",

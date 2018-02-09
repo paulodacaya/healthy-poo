@@ -1,41 +1,45 @@
 const comments = [
   {
-    user: "Franky",
-    text: "Looks like I am healthy😇 I feel much better.",
+    name: "Franky",
+    text: "Hey i guess i've been pooin groovie 🤗 yay!",
     replys: [
       {
-        user: "Brook",
-        text: "I'm feeling the same way franky!",
+        name: "Brook",
+        text: "I'm feeling the same way Franky!",
+      },
+    ],
+  },
+  {
+    name: "Goretti",
+    text: "Funny, informative, useful, and important.  People become ill and/or die because they think certain topics are embarrassing and/or taboo.",
+  },
+  {
+    name: "Salvator",
+    text: "How did I get here?!??",
+  },
+  {
+    name: "Elvin",
+    text: "Why would your poop smell musty?",
+    replys: [
+      {
+        name: "Louise",
+        text: "I am experiencing that number one on the Bristol stool chart little round hard balls hard to pass this is been going on for weeks now I also have blood clots what should I do I know I need to talk to my doctor but does anyone else know besides drinking water and seeing my doctor please help",
         replys: [
           {
-            user: "hello",
-            text: "I am a third way comment"
+            name: "Enes",
+            text: "I am experiencing that number one on the Bristol stool chart little round hard balls hard to pass this is been going on for weeks now I also have blood clots what should I do I know I need to talk to my doctor but does anyone else know besides drinking water and seeing my doctor please help"
           },
         ],
       },
     ],
   },
   {
-    user: "Franky",
-    text: "Looks like I am healthy :) I feel much better.",
+    name: "Luffy",
+    text: "Mine is always number 4 but very long sizes!",
     replys: [
       {
-        user: "Brook",
-        text: "I'm feeling the same way franky!",
-      },
-    ],
-  },
-  {
-    user: "Franky",
-    text: "Looks like I am healthy :) I feel much better.",
-  },
-  {
-    user: "Franky",
-    text: "Looks like I am healthy :) I feel much better.",
-    replys: [
-      {
-        user: "Brook",
-        text: "I'm feeling the same way franky! "
+        name: "Zoro",
+        text: "That is weird Luffy!",
       },
     ],
   },

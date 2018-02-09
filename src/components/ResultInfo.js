@@ -5,7 +5,7 @@ const ResultInfo = props => {
   const { title, titleColor,
           shapeImagePath, shapeImageAlt, shapeText,
           colorImagePath, colorImageAlt, colorText } = props.info;
-  const { smellyPoo } = props.otherText;
+  const { smellyPoo, howOften } = props.otherText;
 
   return (
     <div className="result-info">
@@ -20,6 +20,8 @@ const ResultInfo = props => {
         <h5>More Concerns:</h5>
         <h5>But my poo smells worse than usual...</h5>
         <p>{smellyPoo}</p>
+        <h5>Frequency</h5>
+        <p>{howOften}</p>
       </section>
       <div className="citation">
         <div className="sources">
