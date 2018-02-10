@@ -4,7 +4,7 @@ const intialState = {
   isDisplayingCommentForm: false,
 };
 
-const properties = (state=intialState, action) => {
+const toggleProperty = (state=intialState, action) => {
 
   switch(action.type) {
     case HelpersActionTypes.TOGGLE_PROPERTY:
@@ -18,4 +18,4 @@ const properties = (state=intialState, action) => {
   } 
 } 
 
-export default properties;
+export default toggleProperty;
