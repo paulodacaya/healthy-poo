@@ -3,18 +3,19 @@ import * as HelpersActionTypes from '../actions/actiontypes/helpers';
 
 
 /*----------  comment action creators  ----------*/
-export const addComment = (name, text) => {
+export const addComment = (name, text, id) => {
   return {
     type: CommentsActionTypes.ADD_COMMENT,
     name,
     text,
+    id,
   }
 }
 
-export const removeComment = index => {
+export const removeComment = id => {
   return {
     type: CommentsActionTypes.REMOVE_COMMENT,
-    index,
+    id,
   }
 }
   

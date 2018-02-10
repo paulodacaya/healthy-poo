@@ -19,7 +19,7 @@ class Result extends Component {
   }
 
   render() {
-    const { dispatch, comments, properties } = this.props;
+    const { dispatch } = this.props;
     const addComment = bindActionCreators( ActionCreators.addComment, dispatch );
     const removeComment = bindActionCreators( ActionCreators.removeComment, dispatch );
     const toggleProperty = bindActionCreators( ActionCreators.toggleProperty, dispatch );
