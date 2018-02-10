@@ -9,23 +9,27 @@ const Comments = (state=intialState, action) => {
 
   switch(action.type) {
     case CommentsActionTypes.ADD_COMMENT:
+      console.log( action.id );
       return [
         ...state,
-        {
+        { 
+          id: action.id,
           name: action.name,
           text: action.text,
         }
       ]
 
-    case CommentsActionTypes.REMOVE_COMMENT:
-      return [
-        ...state.slice( 0, action.index ),
-        ...state.slice( action.index + 1 ),
-      ]
+    case CommentsActionTypes.REMOVE_COMMENT:  
+      const filterByID = comment => {
+        const { id, children } = comment;
+        if(id === action.id) {
+          return false;
+        } else {
+          return true;
+        }
+      }
 
-      
-    case CommentsActionTypes.REPLY_COMMENT:
-      return console.log("replying to a comment");
+      return state.filter( filterByID );
 
     default:
       return state;
