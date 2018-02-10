@@ -1,4 +1,4 @@
-/* decalare varibles */
+/*--------------  variables  ----------------*/
 :root {
   /* colors */
   --black: #000;
@@ -24,10 +24,9 @@
 /* import fonts */
 @import url('https://fonts.googleapis.com/css?family=Arimo:400,700|Pacifico');
 
-
-/************************************************************ 
-BASE STYLES 
-*************************************************************/
+/*=============================================
+=                  Base Styles                =
+=============================================*/
 html {
   background: repeating-linear-gradient(30deg,
                                         var(--iron), var(--iron) 30px,
@@ -134,9 +133,7 @@ section {
   margin: 2.5em 0;
 }
 
-/************************************************************ 
-MEDIA QUERIES
-*************************************************************/
+/*------------  media queires  --------------*/
 @media (min-width: 800px) {
   :root {
     --title-font-size: 4em;

@@ -1,11 +1,11 @@
-/* import CSS style sheets */
+/*--------  import css style sheets  --------*/
 @import url('./reset.css');
 @import url('./base.css');
 
-/************************************************************ 
-MAIN STYLES 
-*************************************************************/
-/* container.wrapper */
+/*=============================================
+=                 Main Styles                 =
+=============================================*/
+/*----------  wrappers/containers  ----------*/
 .wrapper {
   width: 80vw;
   max-width: 1050px;
@@ -24,7 +24,7 @@ MAIN STYLES
   grid-template-columns: minmax(150px, 350px);
 }
 
-/* card  */
+/*----------------  card  -------------------*/
 .card {
   border-radius: var(--border-radius);
   text-align: center;
@@ -42,7 +42,6 @@ MAIN STYLES
 
 .card-image {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
-  /* background-color: var(--lead-slightly-light); */
   background: linear-gradient(var(--lead-light) 45%,
                               var(--lead-slightly-light) 0, var(--lead-slightly-light) 55%,
                               var(--lead-light) 0);
@@ -71,8 +70,7 @@ MAIN STYLES
   padding: 0.3em 0.8em;
 }
 
-
-/* result page */
+/*-----------  result page  -----------------*/
 .result {
   background-color: #f7f7f7;
   border-radius: var(--border-radius);
@@ -100,6 +98,10 @@ MAIN STYLES
 .result-comments {
   text-align: left;
 }
+.result-comments-flex {
+  display: flex;
+  flex-direction: column;
+}
 .radial-border {
   box-shadow: 0 0 0 0.2em var(--lead-slightly-light);
   border-radius: 50%;
@@ -126,17 +128,20 @@ MAIN STYLES
   text-decoration: underline;
   color: rgba(165, 181, 181, 0.8);
 }
-
-/* result comments */
+/*----------------  card  -------------------*/
+/*----------  result comments  --------------*/
 .result-comments {
   margin-top: 8em;
 }
 .comment {
-  display: flex;
   padding: 1em 0;
   border-top: 1px solid var(--lead-dark);
 }
-.comment > strong {
+.comment > div {
+  display: flex;
+  align-items: flex-start;
+}
+.comment strong {
   color: var(--nightfall);
   margin-right: 0.5em;
 }
@@ -147,20 +152,18 @@ MAIN STYLES
   margin: 1.5em 0;
 }
 .comment-btns {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: auto;
 }
 .box-btn {
   padding: 1em;
 }
 .round-btn {
+  margin-top: 0.7em;
   padding: 0.5em 1em;
   border-radius: 50px;
   max-height: 28px;
 }
 .x-btn {
+  margin-left: auto;
   background: none;
   font-size: 1em;
   border: 0;
@@ -197,9 +200,10 @@ MAIN STYLES
 }
 
 
-/************************************************************ 
-MEDIA QUERIES
-*************************************************************/
+
+/*=============================================
+=                Media queires                =
+=============================================*/
 @media (min-width: 500px) {
   .result {
     padding: 1.8em;
@@ -216,11 +220,9 @@ MEDIA QUERIES
   .result-info > main {
     grid-template-columns: 1fr 3fr;
   }
-  .comment-btns {
+  .result-comments-flex {
     flex-direction: row;
-  }
-  .comment-btns .round-btn {
-    margin-left: 5px;
+    justify-content: space-between;
   }
 }
 
