@@ -1,9 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-//data
-import comments from '../data/comments';
-
 export default class ResultComments extends Component {
   
   static propTypes = {
@@ -16,7 +13,8 @@ export default class ResultComments extends Component {
 
   constructor(props) {
     super(props);
-    this.nestingPixels = 0; //used for nesting replied comments
+    this.id = 9;
+    this.nestedMargin = 0; //used to margin-left nested comments
   }
 
   onCommentSubmitForm = event => {
@@ -31,36 +29,52 @@ export default class ResultComments extends Component {
       return;
     }
     
-    this.props.addComment(name, text);
+    this.props.addComment( name, text, this.id );
+    this.id++; //increment unique id
     this.props.toggleProperty( "isDisplayingCommentForm" );
     commentForm.reset();
   }
-    
-  renderCommentsComponent = (comment, index) => {
-    const renderRepliedComments = () => {
-      const { replys } = comment;
 
-      if(replys) {
-        this.nestingPixels += 30;
-        return replys.map(this.renderCommentsComponent);
+  getTotalComments = comments => {
+    let counter = 0;
+    
+    const iterate = comment => {
+      const { children } = comment;
+      counter++;
+
+      if(children) {
+        children.forEach( iterate );
+      }
+    }
+
+    comments.forEach( iterate );
+    return counter;
+  }
+    
+  renderComments = (comment, index) => {
+    const renderNestedComments = () => {
+      const { children } = comment;
+
+      if(children) {
+        this.nestedMargin += 30;
+        return children.map(this.renderComments);
       } else {
-        this.nestingPixels = 0; //reset nested pixel
+        this.nestedMargin = 0; //reset nested pixel
         return;
       } 
     }
     
     return (
       <Fragment key={index}>
-        <div style={ {marginLeft: `${this.nestingPixels}px`} } className="comment" onClick={ () => this.props.removeComment( index ) }>
-          <strong>{comment.name}</strong>
-          <p>{comment.text}</p>
-          <div className="comment-btns">
-            <button className="x-btn">&times;</button>
-            <button className="round-btn">reply</button>
+        <div style={ {marginLeft: `${this.nestedMargin}px`} } className="comment">
+          <div>
+            <strong>{comment.name}</strong>
+            <p>{comment.text}</p>
+            <button className="x-btn" onClick={ () => this.props.removeComment( comment.id ) }>&times;</button>
           </div>
+          <button className="round-btn" onClick={ () => console.log( comment.id ) } >reply</button>
         </div>
-        {}
-        {renderRepliedComments()}
+        {renderNestedComments()}
       </Fragment>
     )
   }
@@ -88,9 +102,12 @@ export default class ResultComments extends Component {
 
     return (
       <div className="result-comments">
-        <h6>Tell us your story:</h6>
+        <div className="result-comments-flex">
+          <h6>Tell us your story:</h6>
+          <h6>({this.getTotalComments( comments )} comments)</h6>
+        </div>
         {displayCommentForm}
-        {comments.map(this.renderCommentsComponent)}
+        {comments.map(this.renderComments)}
       </div>
     );
   }
