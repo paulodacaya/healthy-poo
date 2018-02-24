@@ -15,7 +15,7 @@ const ShapeGrid = () => {
       <div className="grid-container">
         
         {stoolShapes.map( (stoolShape, index) => (
-          <Link key={index} to={`/${stoolShape.shapeCode}`}>
+          <Link key={index} to={`/${stoolShape.code}`}>
             <Card 
               key={index}
               cardImage={stoolShape.imagePath}
