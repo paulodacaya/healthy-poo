@@ -2,8 +2,10 @@
 :root {
   /* colors */
   --black: #000;
-  --light-brown: #B37c57;
   --nightfall: #3c455c;
+  
+  --lighter-brown: #be8e6e;
+  --light-brown: #b37c57;
 
   --lead-light: #b8c5cd;  
   --lead-slightly-light: #aebcc6;
@@ -54,6 +56,10 @@ h1 {
      1px 1px 0 var(--black),
      1px 4px 0 rgba(0, 0, 0, 0.12);
 }
+h1:hover {
+  color: var(--lighter-brown);
+}
+
 h2 {
   font-size: var(--question-font-size);
   margin-bottom: 2em;

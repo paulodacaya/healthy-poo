@@ -128,7 +128,6 @@
   text-decoration: underline;
   color: rgba(165, 181, 181, 0.8);
 }
-/*----------------  card  -------------------*/
 /*----------  result comments  --------------*/
 .result-comments {
   margin-top: 8em;
@@ -197,6 +196,27 @@
 .input.comment {
   height: 150px;
   padding: 0.5em;
+}
+/*-------------  not found  -----------------*/
+.notfound {
+  width: 100%;
+  height: calc( 100vh - 185px );  /* 185px is height of title */
+  position: relative;
+}
+.notfound-container {
+  position: absolute;
+  top: 5%; left: 50%;
+  transform: translateX( -50% );
+  width: 100%;
+  text-align: center;
+}
+.notfound-container > h3 {
+  margin-bottom: 1em;
+}
+
+.notfound-container > img {
+  height: 350px;
+  margin-bottom: 1em; 
 }
 
 
